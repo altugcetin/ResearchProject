@@ -1,0 +1,19 @@
+[package]
+name = "spar_heave_pitch"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ndarray = "0.15"
+ode_solvers = "0.4"
+rand = "0.8"
+rand_distr = "0.4"
+rustfft = "6.2"
+num-complex = "0.4"
+plotters = { version = "0.3", default-features = false, features = ["bitmap_backend", "bitmap_encoder", "line_series", "area_series", "full_palette", "ab_glyph"] }
+ab_glyph = "0.2"
+anyhow = "1.0"
+
+[profile.release]
+opt-level = 3
+lto = true
